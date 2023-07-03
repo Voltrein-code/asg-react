@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: black;
+
 }
 
 .preloader__container {
@@ -12,10 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../../media/page-back.jpg');
-  opacity: 0.85;
   background-position: center;
-  animation: showPreloader .5s ease-in;
 }
 
 .preloader__image {
@@ -25,21 +22,17 @@
 }
 
 @keyframes animatePreloader {
-  from {
-    transform: rotate(0);
-  }
-
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes showPreloader {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to{
+  75% {
     opacity: 1;
+    transform: rotate(360deg);
+  }
+
+  to{
+    opacity: 0;
+    transform: rotate(360deg);
   }
 }

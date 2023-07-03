@@ -3,7 +3,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  transition: opacity 1s ease-in;
+  transition: opacity .5s ease-in;
   opacity: 0;
 }
 

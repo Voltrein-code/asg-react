@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import "./App.css";
 import Preloader from "../Preloader/Preloader";
+import Main from "../Main/Main";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ function App() {
       ) : (
         <div className={visible ? "app app_visible" : "app"}>
           <Header />
+          <Main />
         </div>
       )}
     </>
