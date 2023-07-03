@@ -8,7 +8,7 @@ export default function HeaderMenu() {
         <Button styles="button button_type_about">О компании</Button>
       </li>
       <li>
-        <Button styles="button button_type_about" withRocket={true}>
+        <Button styles="button button_type_order" withRocket={true}>
           Написать нам
         </Button>
       </li>

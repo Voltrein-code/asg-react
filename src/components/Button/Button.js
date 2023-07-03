@@ -11,7 +11,7 @@ export default function Button(props) {
             alt="Иконка ракеты"
             src={rocketImage}
           />
-        )}{" "}
+        )}
         {props.children}
       </button>
     </>
