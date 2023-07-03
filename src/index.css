@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  margin: 0;
+  position: relative;
+  color: black;
+  overflow: overlay;
+}
+
+#root::after {
+  background-image: url('./media/page-back.jpg');
+  background-color: white;
+  opacity: 0.85;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -3;
+  content: '';
+}
+
+@import url("./vendor/fonts/fonts.css");
