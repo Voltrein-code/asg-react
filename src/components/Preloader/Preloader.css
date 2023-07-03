@@ -1,0 +1,45 @@
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+}
+
+.preloader__container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../media/page-back.jpg');
+  opacity: 0.85;
+  background-position: center;
+  animation: showPreloader .5s ease-in;
+}
+
+.preloader__image {
+  width: 5%;
+  height: fit-content;
+  animation: animatePreloader 3s infinite;
+}
+
+@keyframes animatePreloader {
+  from {
+    transform: rotate(0);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes showPreloader {
+  from {
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}

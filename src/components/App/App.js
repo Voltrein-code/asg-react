@@ -1,11 +1,32 @@
+import { useEffect, useState } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import Header from "../Header/Header";
 import "./App.css";
+import Preloader from "../Preloader/Preloader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+      setTimeout(() => {
+        setVisible(true);
+      }, 100);
+    }, 3000);
+  }, []);
+
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <>
+      {loading ? (
+        <Preloader />
+      ) : (
+        <div className={visible ? "app app_visible" : "app"}>
+          <Header />
+        </div>
+      )}
+    </>
   );
 }
 
