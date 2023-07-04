@@ -42,3 +42,8 @@
   box-shadow: inset -3.056px -6.876px 5.348px rgb(0 0 0 / 15%);
   filter: drop-shadow(14.3386px 19.3489px 27.1564px rgba(0,0,0,.35));
 }
+
+.button_type_examples {
+  background-color: #506C7F;
+  color: white;
+}
