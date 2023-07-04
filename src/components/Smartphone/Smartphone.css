@@ -1,0 +1,83 @@
+.smartphone {
+  position: absolute;
+  width: 297.96px;
+  height: 573px;
+  left: 75.8px;
+  top: 29px;
+  box-shadow: inset -3.056px -6.876px 5.348px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(14.3386px 19.3489px 27.1564px rgba(0, 0, 0, 0.15));
+  border-radius: 40.7346px;
+  content: ' ';
+}
+
+.smartphone__speaker {
+  position: absolute;
+  height: 19.86px;
+  left: 103.14px;
+  right: 103.1px;
+  top: 14.52px;
+  background-image: url('../../media/smartphone-speaker.svg');
+  border-radius: 76.4px;
+  z-index: 1;
+}
+
+.smartphone__screen {
+  box-sizing: border-box;
+  
+  width: 100%;
+  height: 100%;
+  object-position: left;
+  object-fit: cover;
+  
+  border: 0.764px solid #2D2D2D;
+  box-shadow: inset 0.764px 0.764px 1.528px rgba(0, 0, 0, 0.25);
+  border-radius: 45.84px;
+}
+
+.smartphone__button {
+  background: linear-gradient(193.25deg, #2D2D2D 9.53%, #726F6F 56.11%, #2D2D2D 94.81%);
+  border: 0.0655475px solid #D8D8D8;
+  border-radius: 3.93285px;
+  position: absolute;
+  z-index: -1;
+}
+
+.smartphone__button_type_mute {
+  left: -6.11px;
+  right: 294.86px;
+  top: 74.11px;
+  bottom: 475.21px;
+}
+
+.smartphone__button_type_power {
+  left: 295.67px;
+  right: -6.92px;
+  top: 115.36px;
+  bottom: 385.06px;
+}
+
+.smartphone__button_type_volume-down {
+  left: -6.11px;
+  right: 294.86px;
+  top: 173.43px;
+  bottom: 346.86px;
+}
+
+.smartphone__button_type_volume-up {
+  left: -6.11px;
+  right: 294.86px;
+  top: 112.31px;
+  bottom: 407.98px;
+}
+
+.smartphone__border {
+  position: absolute;
+  left: -3.06px;
+  right: -3.1px;
+  top: -4.26px;
+  bottom: -4.26px;
+  background: linear-gradient(193.25deg, #2D2D2D 9.53%, #726F6F 56.11%, #2D2D2D 94.81%);
+  border: 0.764px solid #D8D8D8;
+  border-radius: 53.48px;
+  padding: 11px;
+}
