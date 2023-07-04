@@ -2,6 +2,7 @@ import AboutSection from "../AboutSection/AboutSection";
 import CoverSection from "../CoverSection/CoverSection";
 import LeadSection from "../LeadSection/LeadSection";
 import MetricsSection from "../MetricsSection/MetricsSection";
+import OrderSection from "../OrderSection/OrderSection";
 import ProductsSection from "../ProductsSection/ProductsSection";
 import "./Main.css";
 
@@ -14,6 +15,7 @@ export default function Main() {
         <ProductsSection />
         <MetricsSection />
         <CoverSection />
+        <OrderSection />
       </main>
     </div>
   );

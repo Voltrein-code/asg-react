@@ -1,0 +1,167 @@
+.order {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 60px;
+  margin: 60px auto 55px;
+  background: inherit;
+  box-shadow: inset 0 0 0 3000px rgba(0, 0, 0, 0.4);
+  max-width: 1280px;
+}
+
+.order__text {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #d2d2d2;
+  margin: 0;
+}
+
+.order__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.order__input {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2D2D2D;
+  width: 100%;
+  border: 0;
+  outline: none;
+}
+
+.order__input_type_mail {
+  padding-left: 6px;
+  border-left: 1px solid #DBE3FF;
+}
+
+.order__input_type_name {
+  padding-left: 6px;
+  border-left: 1px solid #DBE3FF;
+}
+
+.order__input_type_text {
+  box-sizing: border-box;
+  padding: 8px 20px;
+  height: 180px;
+  background: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 20px;
+  resize: none;
+}
+
+.order__input-icon {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0;
+}
+
+.order__input-icon_type_mail {
+  background-image: url('../../media/email-input-icon.svg');
+}
+
+.order__input-icon_type_name {
+  background-image: url('../../media/name-input-icon.svg');
+}
+
+.order__input-error {
+  align-self: center;
+  font-size: 12px;
+  line-height: 12px;
+  color: #f00;
+  min-height: 12px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.order__input-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid #D8D8D8;
+  border-radius: 20px;
+}
+
+.order__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 465px;
+}
+
+.order__heading {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: white;
+  margin: 0;
+}
+
+.order__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 525px;
+}
+
+.order__container {
+  display: flex;
+  gap: 60px;
+  flex: 1;
+}
+
+.order__contacts {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.order__contact {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #d2d2d2;
+  margin: 0;
+  padding: 0;
+}
+
+.order__contact-icon {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+.order__contact-icon_type_email {
+  background-image: url('../../media/mail-icon.svg');
+}
+
+.order__contact-icon_type_phone {
+  background-image: url('../../media/phone-icon.svg');
+}
+
+.order__contact-container {
+  display: flex;
+  gap: 12px;
+}
