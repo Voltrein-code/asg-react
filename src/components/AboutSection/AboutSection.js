@@ -5,7 +5,7 @@ import AboutCard from "../AboutCard/AboutCard";
 
 export default function AboutSection() {
   return (
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__info">
         <h2 class="about__heading section-heading">О нас</h2>
         <p class="section-text about__text">

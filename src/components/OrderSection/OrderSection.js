@@ -2,7 +2,7 @@ import "./OrderSection.css";
 
 export default function OrderSection() {
   return (
-    <section className="order">
+    <section className="order" id="order">
       <div className="order__container">
         <div className="order__text-block">
           <div className="order__info">

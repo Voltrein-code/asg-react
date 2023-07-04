@@ -4,7 +4,7 @@ import ProductCard from "../ProductCard/ProductCard";
 
 export default function ProductsSection() {
   return (
-    <section class="products">
+    <section class="products" id="products">
       <div class="products__info">
         <h3 class="products__heading section-heading">Наши услуги</h3>
         <p class="products__text section-text"></p>

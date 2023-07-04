@@ -1,3 +1,4 @@
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "../Button/Button";
 import Smartphone from "../Smartphone/Smartphone";
 
@@ -17,12 +18,18 @@ export default function LeadSection() {
           </p>
           <ul className="lead__buttons">
             <li>
-              <Button styles="button button_type_order" withRocket={true}>
-                Написать нам
-              </Button>
+              <AnchorLink href="#order" className="anchor-scroll">
+                <Button styles="button button_type_order" withRocket={true}>
+                  Написать нам
+                </Button>
+              </AnchorLink>
             </li>
             <li>
-              <Button styles="button button_type_examples">Наши услуги</Button>
+              <AnchorLink href="#products" className="anchor-scroll">
+                <Button styles="button button_type_examples">
+                  Наши услуги
+                </Button>
+              </AnchorLink>
             </li>
           </ul>
         </div>
