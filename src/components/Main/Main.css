@@ -12,10 +12,14 @@
   align-items: center;
   padding: 40px 30px;
   gap: 30px;
-
   background: inherit;
   position: relative;
+  transition: all .3s ease-in-out;
+}
 
+.card:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(105%);
 }
 
 .card::before {

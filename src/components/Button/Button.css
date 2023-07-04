@@ -30,6 +30,12 @@
   margin-right: 30px;
 }
 
+.button_type_product {
+  width: 100%;
+  background-color: #506C7F;
+  color: white;
+}
+
 .button_type_order {
   color: white;
   background-color: #506C7F;
