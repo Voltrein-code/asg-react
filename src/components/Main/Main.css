@@ -5,3 +5,136 @@
   flex-direction: column;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  gap: 30px;
+
+  background: inherit;
+  position: relative;
+
+}
+
+.card::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(1px);
+  box-shadow: inset 0 0 0 3000px rgba(0, 0, 0, 0.4);
+}
+
+.card_type_product {
+  border: 0;
+}
+
+.card__text {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #d4d4d4;
+  margin: 0;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.card__info_type_product {
+  gap: 6px;
+  width: 310px;
+  align-items: self-start;
+}
+
+.card__image {
+  align-self: center;
+}
+
+.card__image_type_icon {
+  width: 82px;
+  height: 82px;
+}
+
+.card__heading {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: white;
+  margin: 0;
+}
+
+.card__heading_type_product {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 150%;
+  letter-spacing: normal;
+  align-self: center;
+  text-align: center;
+}
+
+.card__features {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card__feature {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: white;
+}
+
+.card__feature-check {
+  background-image: url('../../media/check.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-feature-settings: 'liga' off;
+  color: #009379;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
