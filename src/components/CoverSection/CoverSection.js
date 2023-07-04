@@ -1,5 +1,5 @@
+import Laptop from "../Laptop/Laptop";
 import "./CoverSection.css";
-import laptopImage from "../../media/laptop-back.jpg";
 
 export default function CoverSection() {
   return (
@@ -13,17 +13,7 @@ export default function CoverSection() {
         </div>
         <button className="button button_type_order">Оставить заявку</button>
         <div className="cover__visuals">
-          <div className="laptop">
-            <div className="laptop__speaker"></div>
-            <div className="laptop__screen">
-              <div className="laptop__top-bar"></div>
-              <img
-                className="laptop__image"
-                src={laptopImage}
-                alt="Фон ноутбука"
-              />
-            </div>
-          </div>
+          <Laptop />
         </div>
       </div>
     </section>

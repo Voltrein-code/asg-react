@@ -1,0 +1,42 @@
+.laptop {
+  box-shadow: inset -2.25778px -5.08px 3.95111px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(10.5934px 14.295px 20.0632px rgba(0, 0, 0, 0.15));
+  content: ' ';
+  position: absolute;
+  top: 4px;
+  left: calc((100% - 842.15px)/2);
+  background: linear-gradient(12.57deg, #2d2d2d 9.25%, #D2D2D2 43.92%, #2d2d2d 91.11%);
+  border-radius: 22.5778px;
+  padding: 17.5px 14.68px;
+}
+
+.laptop__top-bar {
+  width: 100%;
+  height: 22.58px;
+  background-image: url('../../media/top-bar.svg');
+  background-size: cover;
+  filter: drop-shadow(0px 2.25778px 6.77333px rgba(0, 0, 0, 0.14));
+  border-radius: 8px 8px 0 0;
+}
+
+.laptop__speaker {
+  background-image: url('../../media/laptop-speaker.svg');
+  position: absolute;
+  width: 94.83px;
+  height: 5.08px;
+  left: calc((100% - 94.83px)/2);
+  top: 6.21px;
+}
+
+.laptop__screen {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.69333px;
+  overflow: hidden;
+}
+
+.laptop__image {
+  width: 812.8px;
+  height: 450.99px;
+  object-fit: cover;
+}
