@@ -1,6 +1,8 @@
 import Button from "../Button/Button";
 import Smartphone from "../Smartphone/Smartphone";
 
+import "./LeadSection.css";
+
 export default function LeadSection() {
   return (
     <section className="lead">
@@ -25,8 +27,6 @@ export default function LeadSection() {
           </ul>
         </div>
         <div className="lead__visuals">
-          <div className="lead__star lead__star_color_white"></div>
-          <div className="lead__star lead__star_color_red"></div>
           <Smartphone />
         </div>
       </div>

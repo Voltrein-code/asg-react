@@ -1,3 +1,6 @@
+import smartphoneImage from "../../media/smartphone-back.jpg";
+import "./Smartphone.css";
+
 export default function Smartphone() {
   return (
     <div className="smartphone">
@@ -6,7 +9,7 @@ export default function Smartphone() {
         <img
           className="smartphone__screen"
           alt="Изображение на смартфоне"
-          src="<%=require('./media/smartphone-back.jpg')%>"
+          src={smartphoneImage}
         ></img>
       </div>
       <div className="smartphone__button smartphone__button_type_mute"></div>
