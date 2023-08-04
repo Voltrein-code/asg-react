@@ -1,8 +1,12 @@
 import "./ProductsSection.css";
+import { useState } from "react";
 import { productData } from "../../utils/data";
 import ProductCard from "../ProductCard/ProductCard";
 
 export default function ProductsSection() {
+  const [productInModal, setProductInModal] = useState(null);
+  const closeProductInModal = () => setProductInModal(null);
+
   return (
     <section class="products" id="products">
       <div class="products__info">
@@ -17,6 +21,7 @@ export default function ProductsSection() {
               name={card.cardHeading}
               text={card.cardSubtitle}
               checkList={card.cardCheckList}
+              onCardClick={setProductInModal}
             />
           );
         })}

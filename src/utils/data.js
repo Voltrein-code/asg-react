@@ -98,4 +98,7 @@ const productData = [
   },
 ];
 
+// const productDetails = [
+// ]
+
 export { aboutData, productData };
