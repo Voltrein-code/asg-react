@@ -22,9 +22,11 @@ const Modal = ({ title, onClose, children }) => {
       <div className="modal">
         <div className="modal__header">
           <h3 className="modal__title">{title}</h3>
-          <button className="modal__button" type="button"></button>
         </div>
         <div className="modal__content">{children}</div>
+        <button className="modal__button" type="button">
+          Закрыть
+        </button>
       </div>
     </>,
     modalRoot

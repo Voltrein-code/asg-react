@@ -36,8 +36,8 @@ export default function OrderSection() {
               type="text"
               name="name"
               required
-              minlength="4"
-              maxlength="100"
+              minLength="4"
+              maxLength="100"
               id="name-input"
             />
           </div>
@@ -50,8 +50,8 @@ export default function OrderSection() {
               type="email"
               name="mail"
               required
-              minlength="4"
-              maxlength="100"
+              minLength="4"
+              maxLength="100"
               id="mail-input"
             />
           </div>
@@ -62,7 +62,7 @@ export default function OrderSection() {
             type="text"
             name="text"
             required
-            minlength="150"
+            minLength="150"
             id="mail-input"
           ></textarea>
           <span className="order__input-error name-input-error"></span>
