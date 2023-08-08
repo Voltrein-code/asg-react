@@ -6,11 +6,12 @@
   width: 800px;
   margin: auto;
   padding: 40px;
-  border-radius: 24px;
+  border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.20);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.30) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.60) 0%, rgba(255, 255, 255, 0.10) 100%);
   box-shadow: 5px 5px 4px 0px rgba(255, 255, 255, 0.08) inset, -5px -5px 4px 0px rgba(255, 255, 255, 0.04) inset;
   backdrop-filter: blur(10px);
+  z-index: 3;
 }
 
 .modal__button {
