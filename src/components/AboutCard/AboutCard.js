@@ -1,6 +1,6 @@
 import arrowIcon from "../../media/card-button-arrow.svg";
 
-export default function AboutCard({ image, name, text }) {
+export default function AboutCard({ image, name, text, details, onCardClick }) {
   return (
     <article className="card card_type_about">
       <img
@@ -12,14 +12,16 @@ export default function AboutCard({ image, name, text }) {
         <h3 className="card__heading">{name}</h3>
         <p className="card__text">{text}</p>
       </div>
-      <button className="card__button">
-        Узнать больше
-        <img
-          alt="Иконка стрелки вправо"
-          src={arrowIcon}
-          className="card__button-arrow"
-        />
-      </button>
+      {details && (
+        <button className="card__button" onClick={onCardClick}>
+          Узнать больше
+          <img
+            alt="Иконка стрелки вправо"
+            src={arrowIcon}
+            className="card__button-arrow"
+          />
+        </button>
+      )}
     </article>
   );
 }

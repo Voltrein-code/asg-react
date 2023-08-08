@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./Modal.css";
@@ -5,10 +6,10 @@ import ModalOverlay from "../ModalOverlay/ModalOverlay";
 
 const modalRoot = document.getElementById("modals");
 
-const Modal = ({ title, onClose, children }) => {
+const Modal = ({ onClose, children }) => {
   useEffect(() => {
     const handleEsc = (e) => {
-      e.key === "Escape" && onclose();
+      e.key === "Escape" && onClose();
     };
 
     document.addEventListener("keydown", handleEsc);
@@ -21,11 +22,12 @@ const Modal = ({ title, onClose, children }) => {
     <>
       <ModalOverlay onClick={onClose} />
       <div className="modal">
-        <div className="modal__header">
-          <h3 className="modal__title">{title}</h3>
-        </div>
         <div className="modal__content">{children}</div>
-        <button className="modal__button" type="button">
+        <button
+          className="button button_type_product modal-button"
+          onClick={onClose}
+          type="button"
+        >
           Закрыть
         </button>
       </div>

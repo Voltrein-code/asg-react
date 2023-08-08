@@ -1,4 +1,14 @@
-export default function ProductCard({ image, name, text, checkList }) {
+export default function ProductCard({
+  image,
+  name,
+  text,
+  onCardClick,
+  checkList,
+}) {
+  const handleButtonClick = () => {
+    onCardClick();
+  };
+
   return (
     <article className="card card_type_product">
       <div className="card__info card__info_type_product">
@@ -24,7 +34,12 @@ export default function ProductCard({ image, name, text, checkList }) {
           {checkList[2]}
         </li>
       </ul>
-      <button className="button button_type_product">Подробнее</button>
+      <button
+        className="button button_type_product"
+        onClick={handleButtonClick}
+      >
+        Подробнее
+      </button>
     </article>
   );
 }
