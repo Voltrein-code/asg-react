@@ -27,7 +27,7 @@ export default function LeadSection() {
             <li>
               <AnchorLink href="#products" className="anchor-scroll">
                 <Button styles="button button_type_examples">
-                  Наши услуги
+                  Чем мы занимаемся
                 </Button>
               </AnchorLink>
             </li>
