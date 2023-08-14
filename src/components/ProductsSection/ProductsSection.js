@@ -20,9 +20,7 @@ export default function ProductsSection() {
     <>
       <section className="products" id="products">
         <div className="products__info">
-          <h3 className="products__heading section-heading">
-            Чем мы занимаемся?
-          </h3>
+          <h3 className="products__heading section-heading">Услуги</h3>
           <p className="products__text section-text"></p>
         </div>
         <div className="products__cards">
