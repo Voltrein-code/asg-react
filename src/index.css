@@ -1,5 +1,6 @@
 @import url("./vendor/normalize.css");
 @import url("./vendor/fonts/fonts.css");
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +8,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-y: scroll;
 }
 
 code {
@@ -19,7 +19,6 @@ code {
   margin: 0;
   position: relative;
   color: black;
-  overflow: overlay;
 }
 
 #root::after {
@@ -59,4 +58,19 @@ code {
   color: white;
   margin: 0;
   text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: gray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: lightgray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner{
+  border-radius: 10px;
 }
