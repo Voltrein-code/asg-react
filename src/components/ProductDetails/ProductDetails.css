@@ -36,6 +36,21 @@
   margin-top: 60px;
   margin-bottom: 60px;
   text-align: center;
+  flex-wrap: wrap;
+  overflow: scroll;
+  gap: 30px;
+  overflow-y: scroll;
+  max-height: 400px;
+  scrollbar-width: none; /* firefox */
+}
+
+.product-details__text_type_row {
+  flex-direction: row;
+}
+
+.product-details__text::-webkit-scrollbar { /* webkit */
+  width: 0;
+  height: 0;
 }
 
 .product-details__card-name {
@@ -60,6 +75,15 @@
   color: #d4d4d4; 
 }
 
+.product-details__card-text_type_row {
+  text-align: justify;
+  text-indent: 30px;
+}
+
 .product-details__card {
   max-width: 400px;
+}
+
+.product-details__card_type_row {
+  max-width: 100%;
 }

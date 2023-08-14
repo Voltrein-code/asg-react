@@ -2,7 +2,8 @@ import "./ProductDetails.css";
 import React from "react";
 
 const ProductDetails = ({ productData }) => {
-  const { cardIcon, cardHeading, cardSubtitle, cardDetails } = productData;
+  const { cardIcon, cardType, cardHeading, cardSubtitle, cardDetails } =
+    productData;
 
   return (
     <div className="product-details">
@@ -17,12 +18,44 @@ const ProductDetails = ({ productData }) => {
           <p className="product-details__subtitle">{cardSubtitle}</p>
         </div>
       </div>
-      <div className="product-details__text">
+      <div
+        className={
+          cardType !== "row"
+            ? "product-details__text"
+            : "product-details__text product-details__text_type_row"
+        }
+      >
         {cardDetails.map((element, index) => {
           return (
-            <div className="product-details__card" key={index}>
+            <div
+              className={
+                cardType !== "row"
+                  ? "product-details__card"
+                  : "product-details__card product-details__card_type_row"
+              }
+              key={index}
+            >
               <h4 className="product-details__card-name">{element.name}</h4>
-              <p className="product-details__card-text">{element.text}</p>
+              <p
+                className={
+                  cardType !== "row"
+                    ? "product-details__card-text"
+                    : "product-details__card-text product-details__card-text_type_row"
+                }
+              >
+                {element.text}
+                {element.list && (
+                  <ul className="product-details__card-list">
+                    {element.list.map((item) => {
+                      return (
+                        <li className="product-details__card-list-item">
+                          {item}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </p>
             </div>
           );
         })}
