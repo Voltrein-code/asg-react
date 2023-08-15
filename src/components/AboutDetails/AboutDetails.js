@@ -23,6 +23,15 @@ const AboutDetails = ({ aboutData }) => {
             <div className="about-details__card" key={index}>
               <h4 className="about-details__card-name">{element.name}</h4>
               <p className="about-details__card-text">{element.text}</p>
+              {element.list && (
+                <ul className="about-details__card-list">
+                  {element.list.map((item) => {
+                    return (
+                      <li className="about-details__card-list-item">{item}</li>
+                    );
+                  })}
+                </ul>
+              )}
             </div>
           );
         })}

@@ -40,12 +40,7 @@
   gap: 30px;
   overflow-y: scroll;
   max-height: 400px;
-  scrollbar-width: none; /* firefox */
-}
-
-.about-details__text::-webkit-scrollbar { /* webkit */
-  width: 0;
-  height: 0;
+  padding: 0 20px;
 }
 
 .about-details__card-name {
@@ -75,7 +70,10 @@
 }
 
 .about-details__card:first-child {
+  text-indent: 30px;
   width: 100%;
+  text-align: justify;
+  color: #d4d4d4;
 }
 
 .about-details__card:not(:first-child) {

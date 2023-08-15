@@ -40,7 +40,7 @@
   text-align: center;
   flex-wrap: wrap;
   gap: 30px;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 400px;
 }
 
