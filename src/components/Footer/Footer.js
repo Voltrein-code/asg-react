@@ -1,10 +1,14 @@
 import "./Footer.css";
 
 export default function Footer() {
+  const getCurrentYear = () => {
+    return String(new Date().getFullYear());
+  };
+
   return (
     <footer className="footer">
       <div className="footer__container">
-        <p className="footer__text">@ 2023 АСГ48</p>
+        <p className="footer__text">©2023 - {getCurrentYear()} АСГ48</p>
         <ul className="footer__contacts">
           <li className="footer__contact">
             Наименование: ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АСГ48"
