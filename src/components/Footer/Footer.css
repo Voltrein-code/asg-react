@@ -29,4 +29,12 @@
   list-style: none;
   color: #d2d2d2;
   padding: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+}
+
+.footer__contact-name {
+  font-weight: bold;
 }
