@@ -1,12 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import "./ProductsSection.css";
+import "./ServicesSection.css";
 import { useState, useEffect } from "react";
 import { productData } from "../../utils/data";
 import ProductCard from "../ProductCard/ProductCard";
 import Modal from "../Modal/Modal";
 import ProductDetails from "../ProductDetails/ProductDetails";
 
-export default function ProductsSection() {
+export default function ServicesSection() {
   const [productInModal, setProductInModal] = useState(null);
   const closeProductInModal = () => setProductInModal(null);
 
@@ -20,9 +20,7 @@ export default function ProductsSection() {
     <>
       <section className="products" id="products">
         <div className="products__info">
-          <h3 className="products__heading section-heading">
-            Направления деятельности
-          </h3>
+          <h3 className="products__heading section-heading">Услуги</h3>
           <p className="products__text section-text"></p>
         </div>
         <div className="products__cards">
