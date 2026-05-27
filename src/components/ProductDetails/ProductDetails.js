@@ -2,8 +2,14 @@ import "./ProductDetails.css";
 import React from "react";
 
 const ProductDetails = ({ productData }) => {
-  const { cardIcon, cardType, cardHeading, cardSubtitle, cardDetails } =
-    productData;
+  const {
+    cardIcon,
+    cardType,
+    cardHeading,
+    cardSubtitle,
+    cardDetails,
+    cardPrice,
+  } = productData;
 
   return (
     <div className="product-details">
@@ -16,6 +22,7 @@ const ProductDetails = ({ productData }) => {
         <div className="product-details__heading">
           <h3 className="product-details__title">{cardHeading}</h3>
           <p className="product-details__subtitle">{cardSubtitle}</p>
+          <p className="product-details__price">{`Цена: ${cardPrice}`}</p>
         </div>
       </div>
       <div

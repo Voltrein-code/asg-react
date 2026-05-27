@@ -4,7 +4,6 @@ import LeadSection from "../LeadSection/LeadSection";
 import MetricsSection from "../MetricsSection/MetricsSection";
 import OrderSection from "../OrderSection/OrderSection";
 import ProductsSection from "../ProductsSection/ProductsSection";
-import ServicesSection from "../ServicesSection/ServicesSection";
 import "./Main.css";
 
 export default function Main() {
@@ -14,7 +13,6 @@ export default function Main() {
         <LeadSection />
         <AboutSection />
         <ProductsSection />
-        <ServicesSection />
         <MetricsSection />
         <CoverSection />
         <OrderSection />

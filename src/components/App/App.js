@@ -33,7 +33,7 @@ function App() {
         <link rel="icon" href="../../media/logo.ico" type="any" />
         <link rel="icon" href="../../media/logo.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="../../media/logo.png" />
-        <title>АГС48</title>
+        <title>АСГ48</title>
       </Helmet>
       {loading ? (
         <Preloader />
