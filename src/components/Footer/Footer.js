@@ -40,7 +40,9 @@ export default function Footer() {
           </li>
           <li className="footer__contact">
             <span className="footer__contact-name">Основной код ОКВЭД:</span>
-            <p className="footer__contact-text">1224800012910</p>
+            <p className="footer__contact-text">
+              62.01 Разработка компьютерного программного обеспечения
+            </p>
           </li>
           <li className="footer__contact">
             <span className="footer__contact-name">Фактический адрес:</span>
