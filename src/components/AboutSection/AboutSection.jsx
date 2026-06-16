@@ -11,9 +11,11 @@ export default function AboutSection() {
   const closeAboutInModal = () => setAboutInModal(null);
 
   useEffect(() => {
-    aboutInModal
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "auto");
+    document.body.style.overflow = aboutInModal ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [aboutInModal]);
 
   return (
@@ -32,10 +34,10 @@ export default function AboutSection() {
           </p>
         </div>
         <div className="about__cards">
-          {aboutData.map((card, index) => {
+          {aboutData.map((card) => {
             return (
               <AboutCard
-                key={index}
+                key={card.cardHeading}
                 image={card.cardIcon}
                 name={card.cardHeading}
                 text={card.cardSubtitle}

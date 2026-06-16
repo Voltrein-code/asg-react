@@ -1,18 +1,18 @@
 .lead {
   max-width: 1280px;
   margin: auto;
-  padding: 120px 55px 0px;
+  padding: 120px 55px 0;
   overflow: hidden;
   position: relative;
   background-position: center;
   background-size: cover;
   z-index: 1;
-  box-sizing: content-box;
+  box-sizing: border-box;
   width: 100%;
 }
 
 .lead::before {
-  content: '';
+  content: "";
   z-index: -1;
   position: absolute;
   top: 0;
@@ -30,17 +30,17 @@
 }
 
 .lead__text {
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
   line-height: 150%;
   margin: 0;
-  color: #FFE;
+  color: #ffe;
 }
 
 .lead__slogan {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 47px;
@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 648px;
+  width: min(100%, 648px);
 }
 
 .lead__container {
@@ -69,4 +69,102 @@
   padding: 0;
   margin: 70px 0 0;
   gap: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+  .lead__container {
+    gap: 40px;
+  }
+
+  .lead__visuals {
+    width: 360px;
+    height: 430px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .lead {
+    padding: 90px 40px 20px;
+  }
+
+  .lead__container {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lead__heading {
+    align-items: center;
+  }
+
+  .lead__slogan {
+    font-size: 40px;
+  }
+
+  .lead__buttons {
+    justify-content: center;
+    margin-top: 38px;
+  }
+
+  .lead__visuals {
+    height: 380px;
+    transform: scale(0.82);
+    transform-origin: top center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lead {
+    padding: 64px 32px 0;
+  }
+
+  .lead__slogan {
+    font-size: 34px;
+  }
+
+  .lead__text {
+    font-size: 18px;
+  }
+
+  .lead__visuals {
+    height: 320px;
+    transform: scale(0.68);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .lead {
+    padding: 38px 20px 44px;
+  }
+
+  .lead__slogan {
+    font-size: 29px;
+  }
+
+  .lead__text {
+    font-size: 16px;
+  }
+
+  .lead__buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    margin: 18px auto 0;
+    gap: 14px;
+  }
+
+  .lead__buttons li,
+  .lead__buttons .anchor-scroll {
+    width: 100%;
+  }
+
+  .lead__buttons .button {
+    min-height: 56px;
+    border-radius: 18px;
+  }
+
+  .lead__visuals {
+    display: none;
+  }
 }

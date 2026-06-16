@@ -5,88 +5,232 @@
 
 .product-details__content {
   display: flex;
-  font-family: 'Mulish';
+  align-items: center;
+  width: min(100%, 920px);
+  margin: auto;
+  padding: 0 10px;
+  gap: 32px;
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 150%;
   letter-spacing: normal;
-  gap: 50px;
-  width: 90%;
-  margin: auto;
+}
+
+.product-details__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .product-details__title {
   color: white;
+  margin: 0;
 }
 
 .product-details__subtitle {
   color: #d4d4d4;
+  margin: 0;
 }
 
-.product-details__price{
-  color: #d4d4d4;
-  font-weight: bold;
+.product-details__price {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  width: fit-content;
+  margin: 8px 0 0;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  background: rgba(80, 108, 127, 0.55);
+}
+
+.product-details__price-label {
+  color: #d2d2d2;
+  font-weight: 400;
 }
 
 .product-details__picture {
-  width: 150px;
+  flex: 0 0 auto;
+  width: 132px;
 }
 
 .product-details__text {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
   align-self: center;
-  width: 90%;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  overflow-y: auto;
-  max-height: 400px;
-  max-width: 1440px;
+  width: 100%;
+  margin-top: 44px;
+  margin-bottom: 44px;
+  padding: 0 4px 10px;
+  gap: 18px;
+  max-width: 1100px;
 }
 
 .product-details__text_type_row {
-  flex-direction: row;
-}
-
-
-
-.product-details__card-name {
-  align-items: center;
-  justify-content: center;
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 130%;
-  color: white;
-  text-align: center;
-}
-
-.product-details__card-text {
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: normal;
-  color: #d4d4d4; 
-}
-
-.product-details__card-text_type_row {
-  text-align: justify;
-  text-indent: 30px;
+  grid-template-columns: 1fr;
 }
 
 .product-details__card {
-  max-width: 400px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.035)
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .product-details__card_type_row {
   max-width: 100%;
+}
+
+.product-details__card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.product-details__card-number {
+  flex: 0 0 auto;
+  min-width: 38px;
+  padding-top: 2px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 130%;
+  color: #9fb7c8;
+}
+
+.product-details__card-name {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 135%;
+  color: white;
+  margin: 0;
+}
+
+.product-details__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.product-details__card-text {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 155%;
+  letter-spacing: normal;
+  color: #d4d4d4;
+  margin: 0;
+}
+
+.product-details__card-text_type_row {
+  text-align: left;
+}
+
+.product-details__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-details__card-list-item {
+  position: relative;
+  padding-left: 22px;
+  font-family: "Mulish";
+  font-size: 15px;
+  line-height: 150%;
+  color: #d4d4d4;
+}
+
+.product-details__card-list-item::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9fb7c8;
+  content: "";
+}
+
+@media screen and (max-width: 992px) {
+  .product-details__text {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-details__content {
+    align-items: center;
+    flex-direction: column;
+    gap: 22px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .product-details__price {
+    align-self: center;
+  }
+
+  .product-details__picture {
+    width: 110px;
+  }
+
+  .product-details__text {
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 0 0 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .product-details__content {
+    font-size: 16px;
+  }
+
+  .product-details__title {
+    font-size: 22px;
+  }
+
+  .product-details__price {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+  }
+
+  .product-details__card {
+    padding: 18px;
+  }
+
+  .product-details__card-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .product-details__card-number {
+    min-width: 0;
+  }
 }

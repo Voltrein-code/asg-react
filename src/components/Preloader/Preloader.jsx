@@ -1,4 +1,3 @@
-import { useState } from "react";
 import preloaderImage from "../../media/logo.png";
 import "./Preloader.css";
 

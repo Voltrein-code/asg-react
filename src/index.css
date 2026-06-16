@@ -3,15 +3,27 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -22,7 +34,7 @@ code {
 }
 
 #root::after {
-  background-image: url('./media/page-back.jpg');
+  background-image: url("./media/page-back.jpg");
   background-color: white;
   opacity: 0.85;
   background-position: center;
@@ -32,13 +44,13 @@ code {
   bottom: 0;
   right: 0;
   z-index: -3;
-  content: '';
+  content: "";
 }
 
 /* Миксы */
 
 .section-heading {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 38px;
@@ -49,8 +61,24 @@ code {
   margin: 0;
 }
 
+@media screen and (max-width: 992px) {
+  .section-heading {
+    font-size: 34px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-heading {
+    font-size: 28px;
+  }
+
+  .section-text {
+    font-size: 15px;
+  }
+}
+
 .section-text {
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -70,11 +98,11 @@ code {
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: lightgray;
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-corner{
+::-webkit-scrollbar-corner {
   border-radius: 10px;
 }

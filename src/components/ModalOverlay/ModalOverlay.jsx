@@ -1,4 +1,3 @@
-import React from "react";
 import "./ModalOverlay.css";
 
 const ModalOverlay = ({ onClick }) => {

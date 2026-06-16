@@ -1,27 +1,64 @@
 .footer {
-  background: #2D2D2D;
+  background: #2d2d2d;
 }
 
-.footer__text  {
-  font-family: 'Mulish';
+.footer__container {
+  box-sizing: border-box;
+  width: min(100%, 1280px);
+  margin: auto;
+  padding: 40px 55px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.footer__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__brand-name {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+  color: #ffffff;
+  margin: 0;
+}
+
+.footer__brand-text {
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  font-feature-settings: 'liga' off;
-  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 150%;
+  color: #d2d2d2;
   margin: 0;
-  padding: 0;
-  width: 100%;
 }
 
-.footer__container  {
-  width: 1160px;
-  margin: auto;
-  padding: 24px 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.footer__note {
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 140%;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .footer__contacts {
@@ -29,12 +66,85 @@
   list-style: none;
   color: #d2d2d2;
   padding: 0;
+  margin: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 1.5rem;
-  row-gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.footer__contact {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .footer__contact-name {
-  font-weight: bold;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.footer__contact-text {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #d2d2d2;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.footer__contact-lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.footer__text {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-feature-settings: "liga" off;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .footer__container {
+    padding: 36px 40px 28px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+  }
+
+  .footer__note {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__contacts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer__container {
+    padding: 32px 20px 24px;
+  }
 }

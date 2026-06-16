@@ -13,11 +13,10 @@
   padding-top: 60px;
   gap: 40px;
   z-index: 1;
-  background-image: url('../../media/chip.jpeg');
+  background-image: url("../../media/chip.jpeg");
   background-size: 120%;
   background-position: 68% 25%;
   background-repeat: no-repeat;
-
 }
 
 .cover__container::before {
@@ -29,7 +28,7 @@
   height: 100%;
   background-color: #2b2c33;
   opacity: 0.8;
-  content: '';
+  content: "";
   z-index: -1;
 }
 
@@ -41,7 +40,7 @@
 }
 
 .cover__text {
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
@@ -59,7 +58,7 @@
 }
 
 .cover__heading {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
@@ -68,4 +67,60 @@
   letter-spacing: -0.02em;
   color: white;
   margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .cover {
+    padding: 52px 40px;
+  }
+
+  .cover__heading {
+    font-size: 42px;
+  }
+
+  .cover__text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cover {
+    padding: 44px 32px;
+  }
+
+  .cover__container {
+    padding: 44px 24px 0;
+    background-size: cover;
+  }
+
+  .cover__visuals {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cover {
+    padding: 40px 20px;
+  }
+
+  .cover__container {
+    gap: 28px;
+    border-radius: 16px;
+  }
+
+  .cover__container::before {
+    border-radius: 16px;
+  }
+
+  .cover__heading {
+    font-size: 30px;
+  }
+
+  .cover__text {
+    font-size: 16px;
+  }
+
+  .cover__visuals {
+    height: 120px;
+  }
 }

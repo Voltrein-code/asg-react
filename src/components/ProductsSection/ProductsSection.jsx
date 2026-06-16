@@ -11,9 +11,11 @@ export default function ProductsSection() {
   const closeProductInModal = () => setProductInModal(null);
 
   useEffect(() => {
-    productInModal
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "auto");
+    document.body.style.overflow = productInModal ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [productInModal]);
 
   return (
@@ -24,10 +26,10 @@ export default function ProductsSection() {
           <p className="products__text section-text"></p>
         </div>
         <div className="products__cards">
-          {productData.map((card, index) => {
+          {productData.map((card) => {
             return (
               <ProductCard
-                key={index}
+                key={card.cardHeading}
                 image={card.cardIcon}
                 name={card.cardHeading}
                 text={card.cardSubtitle}

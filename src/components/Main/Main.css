@@ -6,6 +6,7 @@
 }
 
 .card {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,16 +14,17 @@
   gap: 30px;
   background: inherit;
   position: relative;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 
 .card:hover {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: scale(105%);
 }
 
 .card::before {
-  content: '';
+  content: "";
   z-index: -1;
   position: absolute;
   top: 0;
@@ -39,7 +41,7 @@
 }
 
 .card__text {
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -58,7 +60,7 @@
 
 .card__info_type_product {
   gap: 6px;
-  width: 310px;
+  width: 100%;
   align-items: self-start;
 }
 
@@ -72,7 +74,7 @@
 }
 
 .card__heading {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -83,7 +85,7 @@
 }
 
 .card__heading_type_product {
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
@@ -109,7 +111,7 @@
   gap: 12px;
   align-items: center;
   justify-content: center;
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -118,7 +120,7 @@
 }
 
 .card__feature-check {
-  background-image: url('../../media/check.svg');
+  background-image: url("../../media/check.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
@@ -129,15 +131,44 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  font-feature-settings: 'liga' off;
+  font-feature-settings: "liga" off;
   color: #009379;
   background-color: transparent;
   border: 0;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 32px 24px;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card__heading {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    padding: 28px 20px;
+  }
+
+  .card__image_type_icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .card__heading {
+    font-size: 22px;
+  }
 }
