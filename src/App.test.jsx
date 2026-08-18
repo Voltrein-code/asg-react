@@ -44,7 +44,7 @@ test("renders centralized legal details and footer navigation", () => {
   ).toHaveAttribute("href", "#it-accreditation");
   expect(
     screen.getByRole("link", {
-      name: /политика обработки персональных данных/i,
+      name: /конфиденциальность сайта/i,
     })
   ).toHaveAttribute("href", "#privacy");
   expect(
@@ -106,13 +106,15 @@ test("keeps required accreditation content in the main page DOM", () => {
   expect(privacySection).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /политика обработки персональных данных посетителей сайта/i,
+      name: /информация о конфиденциальности сайта/i,
     })
   ).toBeInTheDocument();
   expect(privacySection).toHaveTextContent(
     /хостинг-провайдером является reg\.ru/i
   );
-  expect(privacySection).toHaveTextContent(/не более 30 календарных дней/i);
+  expect(privacySection).toHaveTextContent(
+    /сведения не вводятся и не отправляются через сайт/i
+  );
   expect(privacySection).toHaveTextContent(
     /сайт не использует cookies, системы веб-аналитики/i
   );

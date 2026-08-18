@@ -53,7 +53,6 @@ export const privacyPolicy = {
     website: "https://www.reg.ru/",
     dataLocation: "Российская Федерация",
   },
-  serverLogRetentionDays: 30,
 };
 
 export const technologies = [

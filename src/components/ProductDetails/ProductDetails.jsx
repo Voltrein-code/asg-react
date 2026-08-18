@@ -18,8 +18,8 @@ const ProductDetails = ({ productData }) => {
           <h3 className="product-details__title">{cardHeading}</h3>
           <p className="product-details__subtitle">{cardSubtitle}</p>
           <p className="product-details__price">
-            <span className="product-details__price-label">Цена</span>
-            {cardPrice}
+            <span className="product-details__price-label">Цена:</span>
+            <span className="product-details__price-value">{cardPrice}</span>
           </p>
         </div>
       </div>

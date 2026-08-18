@@ -24,10 +24,13 @@ html {
 
 a:focus-visible,
 button:focus-visible,
-summary:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #8fa8ba;
+  outline-offset: 3px;
+}
+
 [tabindex="-1"]:focus {
-  outline: 3px solid #f2cf66;
-  outline-offset: 4px;
+  outline: none;
 }
 
 body {

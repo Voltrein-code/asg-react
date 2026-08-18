@@ -78,7 +78,7 @@ export default function Footer() {
           <a href="#services">Услуги</a>
           <a href="#technologies">Технологии</a>
           <a href="#it-accreditation">Сведения об ИТ-деятельности</a>
-          <a href="#privacy">Политика обработки персональных данных</a>
+          <a href="#privacy">Конфиденциальность сайта</a>
           <a href="#contacts">Контакты</a>
         </nav>
         <p className="footer__text">©АСГ48 2022 - {getCurrentYear()}</p>
