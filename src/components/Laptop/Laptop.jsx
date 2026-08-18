@@ -7,7 +7,13 @@ export default function Laptop() {
       <div className="laptop__speaker"></div>
       <div className="laptop__screen">
         <div className="laptop__top-bar"></div>
-        <img className="laptop__image" src={laptopImage} alt="Фон ноутбука" />
+        <img
+          className="laptop__image"
+          src={laptopImage}
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </div>
   );

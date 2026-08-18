@@ -1,33 +1,34 @@
 import "./Footer.css";
+import {
+  bankDetails,
+  itActivityCodes,
+  organization,
+} from "../../content/siteContent";
 
 const legalDetails = [
   {
     title: "Наименование",
-    text: 'ООО "АСГ48"',
-  },
-  {
-    title: "Банк",
-    text: "АО «Россельхозбанк», р/с: 40702810224000001658, БИК: 044206756, к/с: 30101810800000000756",
+    text: organization.fullName,
   },
   {
     title: "Реквизиты",
-    lines: ["ИНН: 4813030827", "КПП: 481301001", "ОГРН: 1224800012910"],
+    lines: [
+      `ИНН: ${organization.inn}`,
+      `КПП: ${organization.kpp}`,
+      `ОГРН: ${organization.ogrn}`,
+    ],
   },
   {
     title: "Юридический адрес",
-    text: "398501, Липецкая обл, Липецкий м.о., Комплекс Рудничный тер., здание № 1",
+    text: organization.address,
   },
   {
     title: "Основной код ОКВЭД",
-    text: "62.01 Разработка компьютерного программного обеспечения",
-  },
-  {
-    title: "Фактический адрес",
-    text: "398501, Липецкая обл, Липецкий м.о., Комплекс Рудничный тер., здание № 1",
+    text: `${organization.okved.code} — ${organization.okved.description}`,
   },
   {
     title: "Виды ИТ-деятельности согласно приказу Минцифры №449",
-    text: "1.01, 3.01, 4.01, 28.01, 28.02",
+    text: itActivityCodes.map((activity) => activity.code).join(", "),
   },
 ];
 
@@ -37,7 +38,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="requisites" tabIndex="-1">
       <div className="footer__container">
         <div className="footer__top">
           <div className="footer__brand">
@@ -66,6 +67,20 @@ export default function Footer() {
             </li>
           ))}
         </ul>
+        <details className="footer__bank-details">
+          <summary>Банковские реквизиты</summary>
+          <p>
+            {bankDetails.bank}, р/с: {bankDetails.settlementAccount}, БИК:{" "}
+            {bankDetails.bik}, к/с: {bankDetails.correspondentAccount}.
+          </p>
+        </details>
+        <nav className="footer__navigation" aria-label="Навигация в подвале">
+          <a href="#services">Услуги</a>
+          <a href="#technologies">Технологии</a>
+          <a href="#it-accreditation">Сведения об ИТ-деятельности</a>
+          <a href="#privacy">Политика обработки персональных данных</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
         <p className="footer__text">©АСГ48 2022 - {getCurrentYear()}</p>
       </div>
     </footer>

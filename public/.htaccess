@@ -1,0 +1,23 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Единый канонический адрес сайта.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.asg48\.ru$ [NC]
+RewriteRule ^ https://asg48.ru%{REQUEST_URI} [R=301,L,NE]
+
+# Убираем дубль /index.html из поискового индекса.
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
+RewriteRule ^index\.html$ https://asg48.ru/ [R=301,L,NE]
+
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-QnmkilhYeJMcCT4a+r+KJ2NUSgg4nBBxA2PyuVccmW8='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), geolocation=(), microphone=(), payment=(), usb=()"
+
+  <FilesMatch "^(?:index\.html|robots\.txt|sitemap\.xml|manifest\.json)$">
+    Header always set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+</IfModule>

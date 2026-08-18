@@ -1,11 +1,10 @@
-import { HashLink as Link } from "react-router-hash-link";
 import "./Logo.css";
 
 export default function Logo() {
   return (
-    <Link to="" className="logo">
-      <div className="logo__image"></div>
+    <a href="/" className="logo" aria-label="АСГ48 — на начало страницы">
+      <div className="logo__image" aria-hidden="true"></div>
       <p className="logo__name">АСГ48</p>
-    </Link>
+    </a>
   );
 }

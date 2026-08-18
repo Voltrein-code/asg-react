@@ -13,11 +13,7 @@ const ProductDetails = ({ productData }) => {
   return (
     <div className="product-details">
       <div className="product-details__content">
-        <img
-          className="product-details__picture"
-          alt="Иконка услуги"
-          src={cardIcon}
-        />
+        <img className="product-details__picture" alt="" src={cardIcon} />
         <div className="product-details__heading">
           <h3 className="product-details__title">{cardHeading}</h3>
           <p className="product-details__subtitle">{cardSubtitle}</p>

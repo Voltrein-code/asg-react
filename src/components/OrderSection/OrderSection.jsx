@@ -1,18 +1,19 @@
 import "./OrderSection.css";
+import { organization } from "../../content/siteContent";
 
 const contacts = [
   {
     label: "Телефон",
-    value: "+7 (4742) 72-72-18",
-    href: "tel:+74742727218",
+    value: organization.phone.display,
+    href: organization.phone.href,
     iconClassName: "order__contact-icon_type_phone",
     actionLabel: "Позвонить",
     actionClassName: "order__action",
   },
   {
     label: "Электронная почта",
-    value: "asg.48@mail.ru",
-    href: "mailto:asg.48@mail.ru",
+    value: organization.email.display,
+    href: organization.email.href,
     iconClassName: "order__contact-icon_type_email",
     actionLabel: "Написать",
     actionClassName: "order__action order__action_type_secondary",
@@ -21,14 +22,15 @@ const contacts = [
 
 export default function OrderSection() {
   return (
-    <section className="order" id="order">
+    <section className="order" id="contacts" tabIndex="-1">
       <div className="order__container">
         <div className="order__text-block">
           <div className="order__info">
             <h2 className="order__heading">Оставайтесь на связи!</h2>
             <p className="order__text">
-              Свяжитесь с нами удобным способом. Ответим на вопросы,
-              проконсультируем по услугам и подскажем следующий шаг.
+              Свяжитесь с нами по телефону или электронной почте. Сайт не
+              содержит форм, аналитики, рекламных пикселей и иных средств сбора
+              пользовательских данных.
             </p>
           </div>
         </div>

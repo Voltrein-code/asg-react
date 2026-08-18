@@ -48,7 +48,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 38px;
+  font-size: 22px;
   line-height: 130%;
   text-align: center;
   letter-spacing: -0.02em;
@@ -98,6 +98,6 @@
   }
 
   .metrics__tab-heading {
-    font-size: 32px;
+    font-size: 21px;
   }
 }

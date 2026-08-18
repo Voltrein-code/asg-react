@@ -123,6 +123,42 @@
   width: 100%;
 }
 
+.footer__bank-details {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 155%;
+  color: #d2d2d2;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer__bank-details summary {
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer__bank-details p {
+  margin: 14px 0 0;
+}
+
+.footer__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+}
+
+.footer__navigation a {
+  font-family: "Mulish";
+  font-size: 14px;
+  line-height: 150%;
+  color: #ffffff;
+  text-underline-offset: 4px;
+}
+
 @media screen and (max-width: 992px) {
   .footer__container {
     padding: 36px 40px 28px;

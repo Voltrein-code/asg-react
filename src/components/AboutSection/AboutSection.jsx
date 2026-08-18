@@ -20,7 +20,7 @@ export default function AboutSection() {
 
   return (
     <>
-      <section className="about" id="about">
+      <section className="about" id="about" tabIndex="-1">
         <div className="about__info">
           <h2 className="about__heading section-heading">О нас</h2>
           <p className="section-text about__text">
@@ -49,7 +49,10 @@ export default function AboutSection() {
         </div>
       </section>
       {aboutInModal && (
-        <Modal onClose={closeAboutInModal} title="Детали по услуге">
+        <Modal
+          onClose={closeAboutInModal}
+          title={`Подробнее: ${aboutInModal.cardHeading}`}
+        >
           <AboutDetails aboutData={aboutInModal} />
         </Modal>
       )}

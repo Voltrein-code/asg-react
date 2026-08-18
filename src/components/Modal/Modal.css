@@ -23,6 +23,15 @@
   overflow: hidden;
 }
 
+.modal__title {
+  flex: 0 0 auto;
+  margin: 0 0 24px;
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 130%;
+  color: #ffffff;
+}
+
 .modal__content {
   overflow-y: auto;
   min-height: 0;

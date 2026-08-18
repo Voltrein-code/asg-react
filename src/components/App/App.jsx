@@ -1,50 +1,45 @@
-/* eslint-disable import/order */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Header from "../Header/Header";
 import "./App.css";
-import Preloader from "../Preloader/Preloader";
+import "../Button/Button.css";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { Helmet } from "react-helmet";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  const [visible, setVisible] = useState(false);
-
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-      setTimeout(() => {
-        setVisible(true);
-      }, 100);
-    }, 3000);
+    const focusHashTarget = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      const target = id ? document.getElementById(id) : null;
+
+      if (!target) {
+        return;
+      }
+
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      window.requestAnimationFrame(() => {
+        target.scrollIntoView({
+          behavior: reduceMotion ? "auto" : "smooth",
+          block: "start",
+        });
+        target.focus({ preventScroll: true });
+      });
+    };
+
+    focusHashTarget();
+    window.addEventListener("hashchange", focusHashTarget);
+
+    return () => window.removeEventListener("hashchange", focusHashTarget);
   }, []);
 
   return (
-    <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Наша компания оказывает ИТ услуги в разных областях. Все от проектирования и разработки до внедрения и сопровождения"
-        />
-        <link rel="icon" href="../../media/logo.ico" type="any" />
-        <link rel="icon" href="../../media/logo.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="../../media/logo.png" />
-        <title>АСГ48</title>
-      </Helmet>
-      {loading ? (
-        <Preloader />
-      ) : (
-        <div className={visible ? "app app_visible" : "app"}>
-          <Header />
-          <Main />
-          <Footer />
-        </div>
-      )}
-    </>
+    <div className="app">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   );
 }
 

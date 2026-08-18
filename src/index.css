@@ -18,6 +18,18 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 24px;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex="-1"]:focus {
+  outline: 3px solid #f2cf66;
+  outline-offset: 4px;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -105,4 +117,19 @@ code {
 
 ::-webkit-scrollbar-corner {
   border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,0 +1,259 @@
+.it-info {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  width: min(100%, 1280px);
+  margin: 60px auto;
+  padding: 72px 55px;
+  color: #ffffff;
+  background: rgba(8, 14, 20, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.it-info__header {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 900px;
+}
+
+.it-info__eyebrow,
+.it-info__title,
+.it-info__lead,
+.it-info__subtitle,
+.it-info__section-note,
+.it-info__updated,
+.it-info__code-number,
+.it-info__code-description,
+.it-info__code-services,
+.it-info__service-name,
+.it-info__service-description,
+.it-info__service-price,
+.it-info__technology-list,
+.it-info__pending,
+.it-info__value,
+.it-info__disclosure h4 {
+  margin: 0;
+}
+
+.it-info__eyebrow {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b8d0e2;
+}
+
+.it-info__title {
+  font-family: "Montserrat";
+  font-size: 38px;
+  line-height: 130%;
+}
+
+.it-info__lead,
+.it-info__section-note,
+.it-info__updated {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 155%;
+  color: #d6dce1;
+}
+
+.it-info__block {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.it-info__subtitle {
+  font-family: "Montserrat";
+  font-size: 25px;
+  line-height: 135%;
+}
+
+.it-info__details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+}
+
+.it-info__detail {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.it-info__detail_wide {
+  grid-column: 1 / -1;
+}
+
+.it-info__detail dt {
+  margin-bottom: 8px;
+  font-family: "Mulish";
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #aebdca;
+  text-transform: uppercase;
+}
+
+.it-info__detail dd {
+  margin: 0;
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 155%;
+  overflow-wrap: anywhere;
+}
+
+.it-info__detail a {
+  color: #ffffff;
+  text-underline-offset: 4px;
+}
+
+.it-info__codes,
+.it-info__services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.it-info__code,
+.it-info__service,
+.it-info__disclosure {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.it-info__code-number,
+.it-info__service-name,
+.it-info__disclosure h4 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.it-info__code-description,
+.it-info__service-description,
+.it-info__code-services,
+.it-info__service-price,
+.it-info__pending,
+.it-info__value {
+  margin-top: 12px;
+  font-family: "Mulish";
+  font-size: 15px;
+  line-height: 155%;
+  color: #d6dce1;
+}
+
+.it-info__code-services span,
+.it-info__service-price span {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.it-info__technology-list {
+  padding: 22px;
+  border-radius: 10px;
+  font-family: "Montserrat";
+  font-size: 19px;
+  line-height: 160%;
+  background: rgba(80, 108, 127, 0.33);
+}
+
+.it-info__disclosures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.it-info__pending {
+  color: #f0dca4;
+}
+
+.it-info__software-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.it-info__software-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-family: "Mulish";
+  font-size: 15px;
+  line-height: 150%;
+  color: #d6dce1;
+}
+
+.it-info__software-list a {
+  color: #ffffff;
+  text-underline-offset: 4px;
+}
+
+.it-info__updated {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+@media screen and (max-width: 992px) {
+  .it-info {
+    padding: 64px 40px;
+  }
+
+  .it-info__disclosures {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .it-info__details,
+  .it-info__codes,
+  .it-info__services {
+    grid-template-columns: 1fr;
+  }
+
+  .it-info__detail_wide {
+    grid-column: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .it-info {
+    gap: 36px;
+    margin: 40px auto;
+    padding: 52px 20px;
+  }
+
+  .it-info__title {
+    font-size: 29px;
+  }
+
+  .it-info__subtitle {
+    font-size: 22px;
+  }
+
+  .it-info__detail,
+  .it-info__code,
+  .it-info__service,
+  .it-info__disclosure {
+    padding: 18px;
+  }
+}

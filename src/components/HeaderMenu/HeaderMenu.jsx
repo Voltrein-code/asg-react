@@ -1,22 +1,25 @@
 import "./HeaderMenu.css";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import Button from "../Button/Button";
+
+const menuItems = [
+  { href: "#services", label: "Услуги" },
+  { href: "#technologies", label: "Технологии" },
+  { href: "#it-accreditation", label: "ИТ-деятельность" },
+  { href: "#contacts", label: "Контакты" },
+  { href: "#requisites", label: "Реквизиты" },
+];
 
 export default function HeaderMenu() {
   return (
-    <ul className="header__menu">
-      <li>
-        <AnchorLink href="#about" className="anchor-scroll">
-          <Button styles="button button_type_about">О компании</Button>
-        </AnchorLink>
-      </li>
-      <li>
-        <AnchorLink href="#order" className="anchor-scroll">
-          <Button styles="button button_type_order" withRocket={true}>
-            Написать нам
-          </Button>
-        </AnchorLink>
-      </li>
-    </ul>
+    <nav aria-label="Основная навигация">
+      <ul className="header__menu">
+        {menuItems.map((item) => (
+          <li key={item.href}>
+            <a className="header__link" href={item.href}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }

@@ -6,11 +6,7 @@ const AboutDetails = ({ aboutData }) => {
   return (
     <div className="about-details">
       <div className="about-details__content">
-        <img
-          className="about-details__picture"
-          alt="Иконка услуги"
-          src={cardIcon}
-        />
+        <img className="about-details__picture" alt="" src={cardIcon} />
         <div className="about-details__heading">
           <h3 className="about-details__title">{cardHeading}</h3>
           <p className="about-details__subtitle">{cardSubtitle}</p>

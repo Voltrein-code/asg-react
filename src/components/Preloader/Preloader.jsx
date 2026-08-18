@@ -5,11 +5,7 @@ export default function Preloader() {
   return (
     <div className="preloader">
       <div className="preloader__container">
-        <img
-          alt="Иконка прелоадера"
-          src={preloaderImage}
-          className="preloader__image"
-        />
+        <img alt="" src={preloaderImage} className="preloader__image" />
       </div>
     </div>
   );

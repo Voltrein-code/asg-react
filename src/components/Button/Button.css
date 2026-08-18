@@ -14,6 +14,10 @@
   transition-property: box-shadow, filter;
   transition-duration: 0.5s;
   transition-timing-function: linear;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
 }
 
 .button_type_about {
@@ -52,6 +56,7 @@
 .button_type_examples {
   background-color: #506c7f;
   color: white;
+  display: flex;
 }
 
 .button_type_submit {

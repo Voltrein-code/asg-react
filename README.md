@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# АСГ48
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Одностраничный сайт ООО «АСГ48» на React и Vite. В проекте нет клиентских маршрутов и отдельных контентных страниц: публичная информация размещается на `/` и доступна через якоря.
 
-## Available Scripts
+## Локальная разработка
 
-In the project directory, you can run:
+```sh
+npm ci
+npm run dev
+```
 
-### `npm start`
+Основные якоря:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `#services` — услуги и стоимость;
+- `#technologies` — фактически используемые технологии;
+- `#it-accreditation` — открытые сведения об ИТ-деятельности;
+- `#contacts` — телефон и электронная почта;
+- `#requisites` — реквизиты организации.
+- `#privacy` — политика обработки данных посетителей сайта и входящих обращений.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Сайт не содержит форм, аналитики, рекламных пикселей, CAPTCHA, внешних карт, сторонних виджетов или cookies. Политика добавлена из-за обработки технических данных в серверных журналах REG.RU и возможных обращений по опубликованным телефону и email. Cookie-баннер и согласие под формой не используются, поскольку соответствующих механизмов на сайте нет.
 
-### `npm test`
+## Единый источник данных
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Подтверждённые реквизиты, контакты, цены, технологии и маркеры неизвестных сведений находятся в `src/content/siteContent.js`. Не заменяйте `REQUIRES_COMPANY_CONFIRMATION` предположениями.
 
-### `npm run build`
+Карточки услуг и секция ИТ-деятельности используют общий каталог `src/utils/data.js`; стоимость берётся из `siteContent.js`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Проверки
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+npm run verify
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Команда запускает линтер, тесты, production-сборку и статическую проверку результата. Отдельная production-проверка после развёртывания:
 
-### `npm run eject`
+```sh
+sh scripts/check-production.sh
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Инструкции по развёртыванию на виртуальном хостинге REG.RU, проверке и откату находятся в `docs/DEPLOYMENT.md`. Результаты аудита и вопросы к компании — в `docs/AUDIT_REPORT.md`.

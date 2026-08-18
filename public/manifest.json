@@ -1,6 +1,6 @@
 {
   "short_name": "ASG48",
-  "name": "Create React App Sample",
+  "name": "АСГ48 — ИТ-услуги",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#1b252d",
+  "background_color": "#1b252d",
+  "lang": "ru"
 }

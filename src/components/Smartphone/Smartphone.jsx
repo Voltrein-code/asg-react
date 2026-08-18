@@ -6,11 +6,7 @@ export default function Smartphone() {
     <div className="smartphone">
       <div className="smartphone__speaker"></div>
       <div className="smartphone__border">
-        <img
-          className="smartphone__screen"
-          alt="Изображение на смартфоне"
-          src={smartphoneImage}
-        ></img>
+        <img className="smartphone__screen" alt="" src={smartphoneImage} />
       </div>
       <div className="smartphone__button smartphone__button_type_mute"></div>
       <div className="smartphone__button smartphone__button_type_volume-up"></div>
