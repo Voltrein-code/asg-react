@@ -77,10 +77,10 @@ test("keeps required accreditation content in the main page DOM", () => {
       .length
   ).toBeGreaterThan(0);
   expect(screen.getByText(/код 3\.01/i)).toBeInTheDocument();
-  expect(screen.getByText(/код 1\.05/i)).toBeInTheDocument();
+  expect(screen.queryByText(/код 1\.05/i)).not.toBeInTheDocument();
   expect(
-    screen.getByText(/разработк[аи].*сайтов и отдельных страниц сайтов/i)
-  ).toBeInTheDocument();
+    screen.queryByText(/разработк[аи].*сайтов и отдельных страниц сайтов/i)
+  ).not.toBeInTheDocument();
   expect(
     screen.getByText(/создание структуры и состава баз данных/i)
   ).toBeInTheDocument();
